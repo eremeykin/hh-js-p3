@@ -3,6 +3,8 @@
 
 https://github.com/hhru/api/blob/master/docs/areas.md
 
+![screenshot](https://github.com/eremeykin/hh-js-p3/blob/master/task-demo.png)
+
 Визуальную работу селекта можно посмотреть здесь
 
 https://jedwatson.github.io/react-select/
