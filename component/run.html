@@ -4,22 +4,44 @@
     <meta charset="UTF-8">
     <title>Homework</title>
     <link rel="stylesheet" type="text/css" href="select_component.css">
-    <script src="select_component.js" type="module"></script>
+    <script src="select_component.js"></script>
     <script src="machine.js" type="module" rel="script"></script>
 </head>
 <body>
 <div class="box">
-    <div class="select-control">
-        <div class="select-placeholder">Select...</div>
+    <div class="select-control" tabindex="0">
 
-        <div class="select-clear-zone">
-            <span class="select-clear">×</span>
+        <!--<div class="select-placeholder">Select...</div>-->
+
+        <div class="content">
+            <div class="select-value">
+                <span class="select-value-icon" aria-hidden="true" onclick="alert(11);">×</span>
+                <a class="select-value-label">Jed Watson<span class="select-aria-only">&nbsp;</span></a>
+            </div>
+
+
+            <div class="select-input">
+                <input role="combobox" value="" onclick="selectClick(event)"
+                       oninput="selectInput(this.value)"
+                       onblur="selectBlur(event)">
+            </div>
         </div>
 
-        <div class="select-arrow-zone">
-            <span class="select-arrow"></span>
-        </div>
 
+        <div class="right-fields">
+            <div class="select-clear-zone">
+                <span class="select-clear">×</span>
+            </div>
+            <div class="select-arrow-zone">
+                <span class="select-arrow"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="select-menu-outer" style="display: none;">
+        <div class="select-menu">
+            <div class="select-option" role="option" id="react-select-5--option-1">Joss Mackison 1</div>
+        </div>
     </div>
 </div>
 </body>
