@@ -66,7 +66,6 @@ const machineInfo = {
                 })
                 .then(function (suggestJson) {
                     clearOptions(context.comp_id);
-
                     if (!suggestJson.hasOwnProperty('items')) {
                         menu.appendChild(createOption("Введите не менее 2 символов", {}));
                     }
@@ -76,7 +75,7 @@ const machineInfo = {
                             mousedown: (event) => {
                                 selectOptionClick(context.comp_id, event)
                             }
-                        }));
+                        }, suggestJson.items[i].id));
                     }
                     if (i === 0) {
                         menu.appendChild(createOption("Нет результатов", {}));
@@ -87,9 +86,9 @@ const machineInfo = {
 
 };
 
-var components = document.getElementsByClassName('select-box');
-for (var i = 0; i < components.length; i++) {
-    let component = components[i];
+let selects = document.getElementsByClassName('select-box');
+for (let i = 0; i < selects.length; i++) {
+    let component = selects[i];
     let comp_input = findElement(component.id, 'select-input');
     let info = {...machineInfo};
     info.context = {comp_id: component.id};
@@ -109,7 +108,6 @@ for (var i = 0; i < components.length; i++) {
     });
 }
 
-
 function findElements(selectId, className) {
     let select = document.getElementById(selectId);
     return select.getElementsByClassName(className);
@@ -126,10 +124,13 @@ function clearOptions(selectId) {
     }
 }
 
-function createOption(text, events) {
+function createOption(text, events, id) {
     let option = document.createElement('div');
     option.className = "select-option";
     option.innerText = text;
+    if (id) {
+        option.setAttribute('data-id', id)
+    }
     for (let e in events) {
         option.addEventListener(e, events[e]);
     }
@@ -137,7 +138,6 @@ function createOption(text, events) {
 }
 
 function selectOptionClick(selectId, event) {
-    let el = findElement(selectId, 'select-menu');
     let tag = document.createElement('div');
     tag.className = "select-value";
     let span = document.createElement('span');
@@ -152,18 +152,19 @@ function selectOptionClick(selectId, event) {
     a.innerText = event.target.innerText;
     tag.appendChild(span);
     tag.appendChild(a);
+    tag.setAttribute('data-id', event.target.getAttribute('data-id'));
     let input = findElement(selectId, 'select-input');
     input.before(tag);
 }
 
 function selectClear(selectId) {
-    let el = findElement(selectId, 'content');
+    let content = findElement(selectId, 'content');
     let tags = findElements(selectId, 'select-value');
     let N = tags.length;
     for (let i = N; i > 0; i--) {
-        let r = el.removeChild(tags[i-1]);
+        let r = content.removeChild(tags[i - 1]);
     }
     let input = findElement(selectId, 'select-input').getElementsByTagName('input')[0];
-    input.value='';
+    input.value = '';
     clearOptions(selectId);
 }
