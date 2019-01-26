@@ -17,8 +17,8 @@
 }
 
 .opened {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .content {
@@ -44,7 +44,7 @@
   display: table-cell;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 19.6px;
+  line-height: 20px;
   padding-right: 5px;
   position: relative;
   text-align: center;
@@ -85,14 +85,14 @@
   animation-play-state: running;
   animation-timing-function: ease;
   border-collapse: separate;
-  border-spacing: 0px 0px;
+  border-spacing: 0 0;
   box-sizing: border-box;
   color: rgb(153, 153, 153);
   cursor: pointer;
   display: table-cell;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 19.6px;
+  line-height: 20px;
   position: relative;
   text-align: center;
   vertical-align: middle;
@@ -118,7 +118,7 @@
 
 .select-input {
   border-collapse: separate;
-  border-spacing: 0px 0px;
+  border-spacing: 0 0;
   box-sizing: border-box;
   color: rgb(51, 51, 51);
   cursor: default;
@@ -126,7 +126,7 @@
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   height: 34px;
-  line-height: 19.6px;
+  line-height: 20px;
   vertical-align: middle;
   padding-left: 10px;
   flex-grow: 1;
@@ -141,29 +141,28 @@
   display: inline-block;
   font-family: inherit;
   font-size: 18px;
-  margin: 0;
   outline: none;
   line-height: 24px;
-  margin-top: 4px;
+  margin: 4px 0 0;
 }
 
 .select-menu-outer {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  border-image-outset: 0px;
+  border-image-outset: 0;
   border-image-repeat: stretch;
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
   border: 1px solid rgb(204, 204, 204);
   border-top-color: rgb(230, 230, 230);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 1px 0 0;
   box-sizing: border-box;
   color: rgb(51, 51, 51);
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 19.6px;
+  line-height: 20px;
   margin-top: -1px;
   max-height: 200px;
   position: absolute;
@@ -181,7 +180,7 @@
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 19.6px;
+  line-height: 20px;
   max-height: 198px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -196,7 +195,7 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   height: 35px;
-  line-height: 19.6px;
+  line-height: 20px;
   padding: 8px 10px;
   width: 498px;
 }
@@ -242,7 +241,7 @@ a.select-value-label {
   font-size: .9em;
   line-height: 1.2;
   height: 20px;
-  margin: 2.5px 2.5px 2.5px 5px;
+  margin: 3px 3px 3px 3px;
   flex-shrink: 0;
   flex-grow: 0;
 }
