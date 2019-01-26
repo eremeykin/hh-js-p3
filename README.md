@@ -1,2 +1,17 @@
-# hh-js-p3
-A repository for HeadHunter school JavaScript part3 homework. 
+# Домашка
+На основе конечного автомата, реализовать простой контрол, который используется в повседневной разработке довольно часто — select + подгрузка данных городов из hhapi.
+
+https://github.com/hhru/api/blob/master/docs/areas.md
+
+![screenshot](https://github.com/eremeykin/hh-js-p3/blob/master/task-demo.png)
+
+Визуальную работу селекта можно посмотреть здесь
+
+https://jedwatson.github.io/react-select/
+
+Нужно реализовать только подмножество функций:
+1) Выбор элемента в дропдауне
+2) Поисковую строку
+3) Выбор нескольких элементов в тегах
+
+**Срок до 27 января**
